@@ -10,34 +10,34 @@
 ## IMPORT FILES
 
 # Read Activity Labels and give column names
-activity_labels <- read.table("./activity_labels.txt", col.names=c("activityID", "activityLabel"))
+activity_labels <- read.table("./UCI HAR Dataset/activity_labels.txt", col.names=c("activityID", "activityLabel"))
 
 # Read Features label data and extract second column of labels
-features <- read.table("./features.txt")
+features <- read.table("./UCI HAR Dataset/features.txt")
 featureNames <- features[ ,2]
 
 # Read Subject train data and name field
-subject_train <- read.table("./train/subject_train.txt")
+subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
 colnames(subject_train) <- "subjectID"
 
 # Read Features train data and name field
-X_train <- read.table("./train/X_train.txt")
+X_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
 colnames(X_train) <- featureNames
 
 # Read Activities train data and name field
-y_train <- read.table("./train/y_train.txt")
+y_train <- read.table("./UCI HAR Dataset/train/y_train.txt")
 colnames(y_train) <- "activityID"
 
 # Read Subject test data and name field
-subject_test <- read.table("./test/subject_test.txt")
+subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
 colnames(subject_test) <- "subjectID"
 
 # Read Features test data and name field
-X_test <- read.table("./test/X_test.txt")
+X_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
 colnames(X_test) <- featureNames
 
 # Read Activities test data and name field
-y_test <- read.table("./test/y_test.txt")
+y_test <- read.table("./UCI HAR Dataset/test/y_test.txt")
 colnames(y_test) <- "activityID"
 
 ## COMBINE FILES
