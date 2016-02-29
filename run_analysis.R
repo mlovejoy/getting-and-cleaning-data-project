@@ -92,4 +92,4 @@ final_tidy_data <- dcast(meanstddata_desc_melt, subjectID + activityLabel + acti
 
 # Create csv file with tidy data set
 
-write.csv(final_tidy_data, "./final_tidy_data.csv", row.names=FALSE)
+write.table(final_tidy_data, "./final_tidy_data.txt", row.names=FALSE)
